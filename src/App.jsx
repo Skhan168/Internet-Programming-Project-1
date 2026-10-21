@@ -1,39 +1,38 @@
-import Header from "./Header.jsk";
-import UserData from "./UserData.jsx";
-import CoreConcept from "./CoreConcept.jsx";
-import{Core_concepts} from './data.js';
+import Header from './components/Header/Header.jsx';
+import CoreConcept from './components/CoreConcept/CoreConcept.jsx';
+import { CORE_CONCEPTS } from './assets/data.js';
 
 function App() {
   return (
     <div>
       <Header />
       <main>
-      <section id="core-concepts">
-        <h2>Time to get started!</h2>
-        <ul>
-           <CoreConcept title = {Core_Concepts[0].title}
-           alt = {Core_Concepts[0].title}
-           description = {Core_Concepts[0].description}
-           image = {Core_Concepts[0].image}/>
-            
-           <Core_Concepts title = {core_concepts[1].title}
-            alt = {Core_Concepts[1].title}
-            description = {Core_Concepts[1].description}
-            image = {Core_Concepts[1].image}/>
+        <section id="core-concepts">
+          <h2>Time to get started!</h2>
+          <ul>
+            <CoreConcept title={CORE_CONCEPTS[0].title}
+              alt={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image} />
 
-            <Core_Concepts title = {core_concepts[2].title}
-            alt = {Core_Concepts[2].title}
-            description = {Core_Concepts[2].description}
-            image = {Core_Concepts[2].image}/>
+            <CoreConcept title={CORE_CONCEPTS[1].title}
+              alt={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+              image={CORE_CONCEPTS[1].image} />
 
-            <Core_Concepts title = {core_concepts[3].title}
-            alt = {Core_Concepts[3].title}
-            description = {Core_Concepts[3].description}
-            image = {Core_Concepts[3].image}/>
+            <CoreConcept title={CORE_CONCEPTS[2].title}
+              alt={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+              image={CORE_CONCEPTS[2].image} />
+
+            <CoreConcept title={CORE_CONCEPTS[3].title}
+              alt={CORE_CONCEPTS[3].title}
+              description={CORE_CONCEPTS[3].description}
+              image={CORE_CONCEPTS[3].image} />
           </ul>
-          </section>
-          </main>
-          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 
