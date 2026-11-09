@@ -15,22 +15,34 @@ export default function Examples() {
   <Section id="examples" title="Examples">
 
       <menu>
-        <TabButton onSelect={() => handleSelect('components')}>
-          Components
-        </TabButton>
+  <TabButton
+    isSelected={selectedTopic === 'components'}
+    onClick={() => handleSelect('components')}
+  >
+    Components
+  </TabButton>
 
-        <TabButton onSelect={() => handleSelect('jsx')}>
-          JSX
-        </TabButton>
+  <TabButton
+    isSelected={selectedTopic === 'jsx'}
+    onClick={() => handleSelect('jsx')}
+  >
+    JSX
+  </TabButton>
 
-        <TabButton onSelect={() => handleSelect('props')}>
-          Props
-        </TabButton>
+  <TabButton
+    isSelected={selectedTopic === 'props'}
+    onClick={() => handleSelect('props')}
+  >
+    Props
+  </TabButton>
 
-        <TabButton onSelect={() => handleSelect('state')}>
-          State
-        </TabButton>
-      </menu>
+  <TabButton
+    isSelected={selectedTopic === 'state'}
+    onClick={() => handleSelect('state')}
+  >
+    State
+  </TabButton>
+</menu>
 
       <div id="tab-content">
         <h3>{EXAMPLES[selectedTopic].title}</h3>
